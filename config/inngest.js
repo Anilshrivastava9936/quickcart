@@ -31,6 +31,7 @@ export const syncUserCreation = inngest.createFunction({
         }
         await connectDB()
         await User.create(userData)
+        console.log("user created")
     })
 
 // inngest function to update user detailes
