@@ -7,7 +7,7 @@ export async function GET(request) {
     try {
         const { userId } = getAuth(request)
         console.log("hgggggggg:",request)
-        console.log("hgggggggg:",userId)
+        console.log("userId:",userId)
         const user = await User.findById(userId)
         await connectDB()
         console.log("hgggggggg::",user)
