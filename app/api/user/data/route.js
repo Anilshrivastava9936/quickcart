@@ -15,7 +15,7 @@ export async function GET(request) {
             return NextResponse.json({ success: false, message: "user not Found1" })
         }
     } catch (error) {
-        return NextResponse.json({ success: false, message: error.messsage })
+        return NextResponse.json({ success: false, message: "false user" })
 
     }
 }
