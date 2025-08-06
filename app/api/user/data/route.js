@@ -1,10 +1,13 @@
 import connectDB from "@/config/db";
-import { getAuth } from '@clerk/nextjs/server'
+import { getAuth } from '@clerk/nextjs/api'
 import User from "@/models/User";
 import { NextResponse } from "next/server";
 
 export async function GET(request) {
     try {
+        const auth = getAuth(request);
+        console.log("🔐 Auth:", auth);
+
         const { userId } = getAuth(request)
         console.log("userId:", userId)
 
